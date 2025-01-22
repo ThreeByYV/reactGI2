@@ -21,7 +21,7 @@ function App() {
     <Route index element={<MovieApp/>}/>
     </Route>
 
-    {/* need to wrap the todo app and details in a context becuase there is state needed for two different components */}
+    {/* needed to wrap the TodoApp and TodoDetails in a context becuase the same state is needed for both components */}
     <Route path="/todo" element={<Layout/>}>
       <Route index 
         element = {
