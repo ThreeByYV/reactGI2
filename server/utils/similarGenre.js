@@ -1,6 +1,5 @@
-const axios = require('axios')
 require('dotenv').config()
-
+const axios = require('axios')
 
 
 const getSimilarGenresMovies = async (ids) => {
@@ -29,3 +28,4 @@ const getSimilarGenresMovies = async (ids) => {
 };
 
 module.exports = getSimilarGenresMovies;
+export default getSimilarGenresMovies;
