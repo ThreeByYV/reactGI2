@@ -22,4 +22,3 @@ export default convertToId = async (userMovieName) => {
     }
 };
 
-module.exports = convertToId;

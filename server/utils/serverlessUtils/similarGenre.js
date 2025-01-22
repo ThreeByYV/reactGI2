@@ -1,7 +1,6 @@
 require('dotenv').config()
 const axios = require('axios')
 
-
 export default getSimilarGenresMovies = async (ids) => {
     const headers = {
         accept: 'application/json',
