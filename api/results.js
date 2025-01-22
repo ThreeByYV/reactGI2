@@ -1,5 +1,5 @@
-import convertToId from '../server/utils/convertToId';
-import getSimilarGenresMovies from '../server/utils/similarGenre';
+import convertToId from '../server/utils/serverless/convertToId';
+import getSimilarGenresMovies from '../server/utils/serverless/similarGenre';
 
 export default async function handler(req, res) {
     const userOption = req.query?.userGenre;

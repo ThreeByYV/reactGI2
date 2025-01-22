@@ -1,7 +1,7 @@
 require('dotenv').config()
 const axios = require('axios');
 
-const convertToId = async (userMovieName) => {
+export default convertToId = async (userMovieName) => {
     const url = `https://api.themoviedb.org/3/search/movie?query=${encodeURIComponent(userMovieName)}&api_key=${process.env.API_KEY}`;
 
     const headers = {

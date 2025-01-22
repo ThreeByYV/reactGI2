@@ -2,7 +2,7 @@ require('dotenv').config()
 const axios = require('axios')
 
 
-const getSimilarGenresMovies = async (ids) => {
+export default getSimilarGenresMovies = async (ids) => {
     const headers = {
         accept: 'application/json',
         Authorization: process.env.TMDB_API_TOKEN
@@ -27,4 +27,4 @@ const getSimilarGenresMovies = async (ids) => {
     }
 };
 
-module.exports = getSimilarGenresMovies;
+
