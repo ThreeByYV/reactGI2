@@ -1,17 +1,17 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
-// https://vite.dev/config/
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   plugins: [react()],
-  // defining backend proxy so no need to hard code routes in server and get to around CORS
   server: {
     proxy: {
       '/api': {
-        target: process.env.VITE_API_URL,
+        target: mode === 'development'
+          ? process.env.VITE_API_URL || 'http://localhost:3000'  // Local backend during development
+          : process.env.VITE_API_URL || 'https://react-gi-2-4ezum8dcm-yonjous-projects.vercel.app', // Deployed backend for production
         changeOrigin: true,
         secure: false,
       }
     }
   }
-})
+}));
