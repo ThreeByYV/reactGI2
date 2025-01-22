@@ -9,7 +9,7 @@ import react from '@vitejs/plugin-react'
       '/api': {
         target: mode === 'development' 
           ? 'http://localhost:3000'  // Local backend during development
-          : 'https://react-gi-2-bsoiq9nvp-yonjous-projects.vercel.app', // Deployed backend for production
+          : 'https://react-gi-2.vercel.app', // Deployed backend for production
         changeOrigin: true,
         secure: false,
       }
