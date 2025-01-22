@@ -8,7 +8,9 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://localhost:3000',
+        target: mode === 'development' 
+          ? 'http://localhost:3000'  // Local backend during development
+          : 'https://react-gi-2-bsoiq9nvp-yonjous-projects.vercel.app', // Deployed backend for production
         changeOrigin: true,
         secure: false,
       }
