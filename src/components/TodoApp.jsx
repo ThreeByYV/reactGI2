@@ -31,9 +31,9 @@ export default function TodoApp() {
       </button>
       <ol>
         {tasks.map((task, index) => (
-          <li className="w-1/4 mx-auto flex justify-between" key={index}>
-            <span className="mr-4">{task}</span>
-            <div>
+          <li className="w-1/4 mx-auto flex justify-between gap-5" key={index}>
+            <span className="mr-4 whitespace-nowrap">{task}</span>
+            <div className='flex justify-center align-center gap-3'>
                 <button className="mr-4 bg-red-600 p-1 pr-2 pl-2" onClick={() => deleteTask(index)}>Delete</button>
                 <button className="mr-4 bg-blue-500 p-1 pr-2 pl-2" onClick={() => startEditingTask(index)}>Edit</button>
             </div>
