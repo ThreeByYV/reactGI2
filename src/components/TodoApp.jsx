@@ -14,7 +14,7 @@ export default function TodoApp() {
   } = useContext(TodoContext);
 
   return (
-    <div className="w-screen h-screen flex flex-col align-center justify-center gap-8 absolute left-0 top-20">
+    <div className="w-screen h-screen flex flex-col align-center justify-center gap-8 absolute left-0 top-10">
       <h1>To-Do List</h1>
       <div>
         <input
@@ -31,7 +31,7 @@ export default function TodoApp() {
       </button>
       <ol>
         {tasks.map((task, index) => (
-          <li className="w-1/4 mx-auto flex justify-between gap-5" key={index}>
+          <li className="w-1/4 mx-auto flex justify-between gap-5 mb-4" key={index}>
             <span className="mr-4 whitespace-nowrap">{task}</span>
             <div className='flex justify-center align-center gap-3'>
                 <button className="mr-4 bg-red-600 p-1 pr-2 pl-2" onClick={() => deleteTask(index)}>Delete</button>
